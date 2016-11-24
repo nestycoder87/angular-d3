@@ -110,10 +110,6 @@ onSelect: function(dateText, inst) {
          var margin = {top: 40, right: 40, bottom: 40, left:40},
           width = 16000,
           height = 500;
-          console.log(data[data.length - 1].Date);
-
-
-
 
           var x = d3.time.scale()
           .domain([new Date(dateTo), d3.time.day.offset(new Date(dateFrom), 1)])
@@ -190,7 +186,7 @@ if(mix == "select"){
         .attr('class', 'y axis')
         .call(yAxis);
 
-        console.log($scope.queryResult);
+
         if(mix == 'checkBox'){
 
 
@@ -273,7 +269,7 @@ if(mix == "select"){
                       .attr('y', function(d) { return (height - margin.top - margin.bottom - (height - margin.top - margin.bottom - y(d.Close))) })
                       .attr('width', 10)
                       .attr('height', function(d) { return height - margin.top - margin.bottom - y(d.Close) });
-                      console.log(data);
+
 
 
                 })
@@ -289,7 +285,7 @@ if(mix == "select"){
 
 
 appp.config(function($routeProvider) {
-  console.log($routeProvider);
+
 	$routeProvider.when('/price_graph', {
     templateUrl: 'view_price_graph.html',
     controller: "FirstController"
@@ -297,17 +293,10 @@ appp.config(function($routeProvider) {
 			templateUrl: 'view_stocks_day.html',
       controller: "FirstController"
 
-		}).when('/3', {
-    			templateUrl: 'view3.html',
-          controller: "FirstController"
-
-    		}).when('/4', {
-        			templateUrl: 'view4.html',
-              controller: "FirstController"
-
-        		})
+		})
 		.otherwise({
-			redirectTo: '/1',
+			redirectTo: '/price_graph',
   controller: "FirstController"
 });
 });
+
