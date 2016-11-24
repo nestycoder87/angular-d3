@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://d3js.org/d3-time.v1.min.js"></script>
+  <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <script src = "bundle.js"> </script>
+
+
+  <title>Document</title>
+
+</head>
+<body ng-app="app" >
+  <div class="container">
+    <div ng-controller="FirstController" class="lefty">
+
+      <a href="#/price_graph" onclick="svgt()">Price graph over time</a>
+      <a href="#/stocks_day" onclick="svgt()">Stocks per day</a>
+      <a href="#/2" onclick="svgt()">Price</a>
+      <a href="#/4" onclick="svgt()">High/Low prices</a>
+    </div>
+    <div class="date">
+       From: <input type="text" id="datepicker">
+       To: <input type="text" id="datepicker1">
+    </div>
+
+    <div ng-view class="lefty right" ng-controller="bodyController" id="main-view"> {{greeting}}
+
+
+      </div>
+
+    <script type="text/javascript">
+
+
+
+      function svgt() {
+        $( document ).ready(function() {
+
+          $('svg').remove();
+        });
+      }
+    </script>
+    </div>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+body{
+font-family: segoe ui light;
+}
+select{
+position: fixed;
+top: 21px;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+a:hover{
+  background-color: #B3B3B3;
+}
+td{
+  text-align: center;
+}
+.date{
+
+    margin-top: 37px;
+
+}
+.low{
+  fill: red;
+}
+.high{
+  fill: green;
+}
+div.header{
+  position: fixed;
+  top: 0px;
+  /* left: 50%; */
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  color: white;
+  z-index: 3;
+}
+.barcsco{
+fill: red;
+}
+.baryhoo{
+  fill: green;
+}
+div.container{
+  display: inline-block;
+}
+div.lefty, div.right{
+  float: left;
+  /* position: fixed; */
+  background-color: #    position;
+}
+div.right{
+  position: relative;
+  padding-left: 144px;
+}
+
+svg{
+display: inline;
+float: left;
+position: relative;
+margin: auto;
+/*left: 214px;*/
+}
+.axis path,
+.axis line {
+fill: none;
+stroke: black;
+shape-rendering: crispEdges;
+}
+.axis text {
+font-family: sans-serif;
+font-size: 11px;
+}
+
+rect {
+-moz-transition: all 0.3s;
+-webkit-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+fill: blue;
+}
+rect:hover{
+fill: red;
+}
+.bar2{
+background-color: red;
+}

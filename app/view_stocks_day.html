@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body >
+<div ng-controller="jsonController" ng-model="myWelcome" ng-init="drawChart('TIF', 'checkBox')">
+  <div class="symbol">
+    {{selected_name}}
+  </div>
+
+
+  <label>TIF
+  <input type="checkbox" ng-checked=true ng-model="checkboxModel.value1" ng-change="se(1)">
+</label><br/>
+<label>CSCO
+<input type="checkbox" ng-checked=true ng-model="checkboxModel.value2" ng-change="se(2)">
+</label><br/>
+<label>YHOO
+  <input type="checkbox" ng-checked=true ng-model="checkboxModel.value3"
+         ng-true-value="true" ng-false-value="false" ng-change="se(3)"/>
+
+
+</div>
+</body>
+</html>

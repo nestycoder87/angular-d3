@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main">
+    <div class="" ng-controller="jsonController" ng-model="queryResult">
+      <div class="header">Stock Price over time. Symbol: {{selected_name}}
+
+      </div>
+      <select
+          ng-init="selected_id=0; drawChart('TIF', 'select')"
+          ng-model="selected_id"
+          ng-options="o.id as o.name for o in options"
+          ng-change="change()">
+  </select>
+  <div class="">
+
+
+  <table>
+    <th>Day</th>
+    <th>Close</th>
+    <th>High</th>
+    <th>Low</th>
+    <th>Open</th>
+    <th>Volume</th>
+    <tr ng-repeat="res in queryResult">
+      <td>{{res.Date}}</td>
+      <td>{{res.Close}}</td>
+      <td>{{res.High}}</td>
+      <td>{{res.Low}}</td>
+      <td>{{res.Open}}</td>
+      <td>{{res.Volume}}</td>
+    </tr>
+  </table>
+  </div>
+    </div>
+  </div>
+</body>
+</html>
